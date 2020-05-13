@@ -1,0 +1,20 @@
+docker build -t jmaroju/pb-project .
+
+
+docker commit jmaroju/pb-project:pbdocker
+
+
+ docker push jmaroju/pb-project:pbdocker
+
+
+docker run -dt -p 5000:5000 jmaroju/pb-project:pbdocker
+
+docker run -dt -p 5000:5000 pbdockerimage
+docker commit 45cdc88fcc80 jmaroju/pb-project:pbdocker
+
+docker push jmaroju/pb-project:pbdocker
+
+docker system prune a
+
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
